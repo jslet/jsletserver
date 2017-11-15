@@ -26,7 +26,7 @@ public class WebMvcConfigurer extends JsletWebConfig {
 
 	@Override
 	protected void addViewControllers(ViewControllerRegistry registry) {
-		registry.addViewController("/").setViewName("forward:/index.html");
+		registry.addRedirectViewController("/", "/demo/index.html?menuids=jv-readme");
 		registry.setOrder(Ordered.HIGHEST_PRECEDENCE);
 		super.addViewControllers(registry);
 	}
